@@ -29,9 +29,10 @@ Will add sub bullets for specific tools/scripts
 -	Check Init Scripts
 -	Check SSH Keys
 -	Check Cron Jobs
--	Check PAM Modules
+-	Check PAM Modules / Backdoored /lib/security/pam_acccess.so
 -	Check Kernel Modules (Rootkit)
 - Monitor Procs/Subprocs (HTOP)
+- Remove Aliases: unalias -a
 -	Enable Pam Audit All user Commands
 
 # Web:
