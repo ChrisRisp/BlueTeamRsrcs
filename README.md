@@ -32,6 +32,7 @@ Will add sub bullets for specific tools/scripts
 -	Check/Remove Bad Users
 -	Check Init Scripts
 -	Check SSH Keys
+     - No remote Root login
 -	Check Cron Jobs
 -	Check PAM Modules / Backdoored /lib/security/pam_acccess.so
 -	Check Kernel Modules (Rootkit)
