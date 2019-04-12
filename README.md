@@ -24,6 +24,7 @@ Will add sub bullets for specific tools/scripts
 # Linux
 -	Reset Passwords (Rotate w/ Sheet)
 -	Enable IPtables w/ Logging from script
+- Check sudo permissions
 -	Check/Remove Bad Users
 -	Check Init Scripts
 -	Check SSH Keys
