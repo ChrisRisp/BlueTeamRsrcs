@@ -7,6 +7,7 @@
 -	DNS
 -	SSH
 -	MYSQL
+- IR Report Author 
 
 # Windows:
 -	Reset Passwords (Rotate w/ Sheet)
@@ -41,3 +42,4 @@
 - https://github.com/chrisjd20/Blue-Team-Cheat-Sheets/blob/master/BTCSwGSEnotes.pdf
 - https://github.com/ucrcyber/CCDC/tree/master/blue-team
 - https://github.com/marshyski/quick-secure/blob/master/quick-secure
+- https://docs.google.com/presentation/d/1pPXLg3KqwSMLRCNRfows5QnVI2mLjSmll5vN2WHMFJg/edit#slide=id.g8e1a55d_0_5
