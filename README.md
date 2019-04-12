@@ -34,6 +34,9 @@ Will add sub bullets for specific tools/scripts
 - Monitor Procs/Subprocs (HTOP)
 - Remove Aliases: unalias -a
 -	Enable Pam Audit All user Commands
+     - Pam Config: session    required     pam_tty_audit.so enable=*
+     - ausearch -ts <some_timestamp> -m tty -i
+     -   aureport --tty
 
 # Web:
 -	Check Apache Modules: Apxs
