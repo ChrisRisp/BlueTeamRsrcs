@@ -1,3 +1,5 @@
+Will add sub bullets for specific tools/scripts
+
 # Possible Roles:
 -	Linux
 -	Windows/AD
@@ -16,18 +18,19 @@
 -	Disable WinRm/RDP
 -	Check for Scheduled Tasks
 -	Check Services
--	Check Subprocesses
+-	Monitor Procs/Subprocs
 -	Pull down Sysinternals
 
 # Linux
 -	Reset Passwords (Rotate w/ Sheet)
--	Enable IPtables w/ script
+-	Enable IPtables w/ Logging from script
 -	Check/Remove Bad Users
 -	Check Init Scripts
 -	Check SSH Keys
 -	Check Cron Jobs
 -	Check PAM Modules
 -	Check Kernel Modules (Rootkit)
+- Monitor Procs/Subprocs (HTOP)
 -	Enable Pam Audit All user Commands
 
 # Web:
