@@ -14,8 +14,18 @@ Will add sub bullets for specific tools/scripts
 # Windows:
 -	Reset Passwords (Rotate w/ Sheet)
 -	Check/Remove Bad Users
+	- List Users```Get-WmiObject -Class Win32_UserAccount```
 -	Check FW Enabled/Rules
--	Disable WinRm/RDP
+-	Disable WinRm (https://4sysops.com/wiki/disable-powershell-remoting-disable-psremoting-winrm-listener-firewall-and-localaccounttokenfilterpolicy/)
+	- 0. Stop Current Session for user if any ```Disable-PSRemoting -Force```
+	- 1. Stop Service Alltogether```Stop-Service WinRm -PassThruSet-Service WinRM -StartupType Disabled -PassThru```
+	- 2. Check For Listener and then Delete Remote Listener
+		- 1. list listeners ```dir wsman:\localhost\listener```
+		- 2. Remove-Item -Path WSMan:\Localhost\listener\<Listener Name>```
+	- 3. Disable Firewall Exceptions
+		- ```Set-NetFirewallRule -DisplayName 'Windows Remote Management (HTTP-In)' -Enabled False -PassThru | Select -Property DisplayName, Profile, Enabled```
+	- 4. Disable remote execution with admin access token. Remote Users will trigger UAC prompt.
+		- ```Set-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system -Name LocalAccountTokenFilterPolicy -Value 0```
 -	Check for Scheduled Tasks
 -	Check Services
 -	Monitor Procs/Subprocs
