@@ -1,4 +1,10 @@
 Will add sub bullets for specific tools/scripts
+# Box Assignment
+- JC - martha, kelsi
+- Johnathan - taylor, darbus
+- Ryan - chad, jason
+- Chris - troy, zeke
+- Ben - sharpay, gabriella
 
 # Possible Roles:
 -	Linux
