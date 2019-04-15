@@ -39,7 +39,7 @@ Will add sub bullets for specific tools/scripts
 -	#### Enable IPtables w/ Logging from script
 -       #### Check sudo permissions
      	- Sanity Check permissions /etc/passwd /etc/shadow
-         	```ls -l /etc/shadow```
+        	```ls -l /etc/shadow```
           	```ls -l /etc/passwd```
      	-  Sudoer Groups only should be root + sudo
            	```cat /etc/sudoers```
@@ -52,7 +52,14 @@ Will add sub bullets for specific tools/scripts
 -       #### No remote Root login
           	```sudo sed i- s/#PermitRootLogin.*/"PermitRootLogin no"/ /etc/ssh/sshd_config; /etc/init.d/sshd restart```
 -	#### Check Cron Jobs
-          	```for user in $(cut -d : -f 1 /etc/passwd; do sudo crontab -u $user -l; done > crontab_summary.txt```
+        - ```for user in $(cut -d : -f 1 /etc/passwd; do sudo crontab -u $user -l; done > crontab_summary.txt```
+	- ```sudo touch /etc/cron.d/cron.allow```, then add users as necessary
+	- ```rm -f /etc/cron.deny```
+- 	#### Check At Jobs
+	- ```atq # check for at jobs```
+	- ```touch /etc/at.d/at.allow```, then add root only
+	- ```rm -f /etc/at.deny```
+		
 -	#### Check PAM Modules / Backdoored /lib/security/pam_acccess.so
 -	#### Check Kernel Modules (Rootkit)
 -       #### Monitor Procs/Subprocs (HTOP)
