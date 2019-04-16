@@ -73,7 +73,11 @@ New-NetFirewallRule -Name "Ping Inbound" -DisplayName "Ping Inbound" -Enabled 1 
 ### Chad
 Services Scored: MSSQL
 ```
-MSQL Firewall rules here
+New-NetFirewallRule -Name "SQL Server Inbound" -DisplayName "SQL Server Inbound" -Direction Inbound -Protocol TCP -LocalPort 1433 -Action Allow -Profile Any
+New-NetFirewallRule -Name "SQL Server Outbound" -DisplayName "SQL Server Outbound" -Direction Outbound -Protocol TCP -LocalPort 1433 -Action Allow -Profile Any
+
+New-NetFirewallRule -Name "SQL Admin Inbound" -DisplayName "SQL Admin Inbound" -Direction Inbound -Protocol TCP -LocalPort 1434 -Action Allow -Profile Any
+New-NetFirewallRule -Name "SQL Admin Outbound" -DisplayName "SQL Admin Outbound" -Direction Outbound -Protocol TCP -LocalPort 1434 -Action Allow -Profile Any
 ```
 
 
