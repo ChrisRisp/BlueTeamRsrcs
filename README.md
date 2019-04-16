@@ -23,6 +23,9 @@ Will add sub bullets for specific tools/scripts
 	- List Users ```Get-WmiObject -Class Win32_UserAccount```
 	- Remove Local Users ```Remove-LocalUser -Name "<name>"```
 - #### Check FW Enabled/Rules
+	- Turn on ```netsh advfirewall set allprofiles state on```
+	- Remove all Rules at Start ```netsh advfirewall set allprofiles firewallpolicy blockinbound,blockoutbound```
+	- Start Logging ```netsh advfirewall set allprofiles logging filename %SystemRoot%\System32\LogFiles\Firewall\pfirewall.log```
 - #### Disable WinRm (https://4sysops.com/wiki/disable-powershell-remoting-disable-psremoting-winrm-listener-firewall-and-localaccounttokenfilterpolicy/)
 	 0. Stop Current Session for user if any ```Disable-PSRemoting -Force```
 	 1. Stop Service Alltogether```Stop-Service WinRm -PassThruSet-Service WinRM -StartupType Disabled -PassThru```
