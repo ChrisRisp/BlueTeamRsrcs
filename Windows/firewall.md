@@ -39,7 +39,7 @@ netsh advfirewall set allprofiles logging MaxFileSize 32676
 netsh advfirewall set allprofiles logging LogDroppedConnections enable
 ```
 
-4. Allow DNS
+4. Allow DNS for CLIENTS
 ```
 # Note this will allow from everywhere we want to allow just from dns server
 netsh advfirwall firewall add rule name="DNS Client" dir=out protocol=udp remoteport=53 action=allow profile=any enable=yes
@@ -80,6 +80,9 @@ New-NetFirewallRule -Name "SQL Admin Inbound" -DisplayName "SQL Admin Inbound" -
 New-NetFirewallRule -Name "SQL Admin Outbound" -DisplayName "SQL Admin Outbound" -Direction Outbound -Protocol TCP -LocalPort 1434 -Action Allow -Profile Any
 ```
 
+### Troy
+```
+```
 
 
 
