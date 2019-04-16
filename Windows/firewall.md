@@ -14,22 +14,15 @@
 > Mainly deals with the technology allowing IPv6 machines to talk to and connect to IPv4 based machines
 
 Disable ipv6 host ability to connect to system
-```
-netsh interface teredo set state type=disabled 
-```
+``` netsh interface teredo set state type=disabled ```
 
 Disables transmission of v6 packets through v4
-```
-netsh interface ipv6 6to4 set state=disabled undoonstop=disabled 
-```
+``` netsh interface ipv6 6to4 set state=disabled undoonstop=disabled ```
 
 Disable transition mechanism between v6 and v4 nodes
-```
-netsh interface ipv6 isatap set state=disabled 
-```
+``` netsh interface ipv6 isatap set state=disabled ```
 
 ### Firewall Rules
-netsh advfirewall firewall show rule name="Ping"
 1. Delete all rules to ensure we controll all access
 ```
 netsh advfirewall reset (netshadvfirewall set allprofiles firewallpolicy blockinbound,blockoutbound)
@@ -37,9 +30,7 @@ netsh advfirewall set allprofiles state on
 netsh advfirewall firewall delete rule name=all # delete all rules to start from scratch
 ```
 2. Set Inital to Drop Everything
-```
-netsh advfirewall set allprofiles firewallpolicy blockinbound,blockoutbound
-```
+``` netsh advfirewall set allprofiles firewallpolicy blockinbound,blockoutbound ```
 
 3. Set up logging
 ```
@@ -67,8 +58,8 @@ OR
 New-NetFirewallRule -Name "DNS Clent" -DisplayName "DNS Clent" -Enabled 1 -Drection Outbound -Protocol UDP -Profile Any -action Allow -RemotePort 53 -RemoteAddress <dcip>
 ```
 
-##### Jason and Zeke
-Services Active : PING, DHCP
+### Jason and Zeke
+Services Scored: PING, DNS
 ```
 netsh advfirewall firewall add rule name="Ping Outbound" profile=any dir=out action=allow protocol=icmp4:8
 netsh advfirewall firewall add rule name="Ping Inbound" profile=any dir=in action=alow protocol=icmp4:8
@@ -79,6 +70,11 @@ New-NetFirewallRule -Name "Ping Outbound" -DisplayName "Ping Outbound" -Enabled 
 New-NetFirewallRule -Name "Ping Inbound" -DisplayName "Ping Inbound" -Enabled 1 -Direction Inbound -Action Block -Profile Any -Protocol ICMPv4
 ```
 
+### Chad
+Services Scored: MSSQL
+```
+MSQL Firewall rules here
+```
 
 
 
