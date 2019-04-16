@@ -84,7 +84,8 @@ Will add sub bullets for specific tools/scripts
 
 # Possible TODOs
 -	Static ARP tables
--       Pull down xor'd script content, enter key, then decode with custom alphabet b64
+-	Pull down xor'd script content, enter key, then decode with custom alphabet b64
+-	Delete script artifacts
 
 # Other Resources
 
