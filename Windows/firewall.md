@@ -1,18 +1,31 @@
 ### Turn on Firewall
 ```netsh advfirewall set allprofiles state on```
+
 ```Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True```
 
 ### Restrict Dynamic Ports
 > Restricting Ports will make it harder for attacks to set up ports
+
 ```netsh interface ipv4 set dynamicportrange protocol=tcp startport=<port> numberofports=<count>```
+
 ```netsh interface ipv4 show dynamicportrange protocol=tcp```
 
 ### Disable IPv6 
 > Mainly deals with the technology allowing IPv6 machines to talk to and connect to IPv4 based machines
+
+Disable ipv6 host ability to connect to system
 ```
-netsh interface teredo set state type=disabled # disable ipv6 host ability to connect to system
-netsh interface ipv6 6to4 set state=disabled undoonstop=disabled # disables transmission of v6 packets through v4
-netsh interface ipv6 isatap set state=disabled # disable transition mechanism between v6 and v4 nodes
+netsh interface teredo set state type=disabled 
+```
+
+Disables transmission of v6 packets through v4
+```
+netsh interface ipv6 6to4 set state=disabled undoonstop=disabled 
+```
+
+Disable transition mechanism between v6 and v4 nodes
+```
+netsh interface ipv6 isatap set state=disabled 
 ```
 
 ### Firewall Rules
@@ -43,7 +56,9 @@ netsh advfirwall firewall add rule name="DNS Client" dir=out protocol=udp remote
 OR
 
 New-NetFirewallRule -Name "DNS Clent" -DisplayName "DNS Clent" -Enabled 1 -Drection Outbound -Protocol UDP -Profile Any -action Allow -RemotePort 53
-
+```
+After Setting up DNS Use these commands to only allow traffic to dns
+```
 # Delete previous rule and use this after DNS is set up
 netsh advfirewall add rule name="DNS Client" dir=out protocol=udp remoteport=53 action=allow profile=any enable=yes remoteip=<dcip>
 
