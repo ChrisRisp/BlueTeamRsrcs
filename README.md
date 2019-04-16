@@ -83,7 +83,8 @@ Will add sub bullets for specific tools/scripts
 -	Check Apache Modules: Apxs
 
 # Possible TODOs
--	Static ARP tables	
+-	Static ARP tables
+-       Pull down xor'd script content, enter key, then decode with custom alphabet b64
 
 # Other Resources
 
