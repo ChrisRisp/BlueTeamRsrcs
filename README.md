@@ -46,6 +46,7 @@ Will add sub bullets for specific tools/scripts
 # Linux
 - #### Reset Passwords (Rotate w/ Sheet)
 - #### Enable IPtables w/ Logging from script
+    - sudo iptables-restore < /etc/iptables.firewall.rules
 - #### Check sudo permissions
     - Sanity Check permissions /etc/passwd /etc/shadow
         - ```ls -l /etc/shadow```
@@ -69,7 +70,7 @@ Will add sub bullets for specific tools/scripts
     - ```touch /etc/at.d/at.allow```, then add root only
     - ```rm -f /etc/at.deny```
 		
-- #### Check PAM Modules / Backdoored /lib/security/pam_acccess.so
+- #### Check PAM Modules / Backdoored /lib/security/pam_access.so
 - #### Check Kernel Modules (Rootkit)
 - #### Monitor Procs/Subprocs (HTOP)
 - #### Remove Aliases 
@@ -78,6 +79,26 @@ Will add sub bullets for specific tools/scripts
     - ```Pam Config: session    required     pam_tty_audit.so enable=*```
     - ```ausearch -ts <some_timestamp> -m tty -i```
     - ```aureport --tty```
+
+# Solaris
+- #### Reset Passwords (Rotate w/ Sheet)
+- #### Enable ipfilter with proper configuration
+- #### Check privileges
+	- ```ppriv <pid/user>```
+    - Sanity Check permissions /etc/passwd /etc/shadow
+        - ```ls -l /etc/shadow```
+        - ```ls -l /etc/passwd```
+- #### Check/Remove Bad Users
+    - ```cut -d : -f1,3,4 /etc/passwd```
+- #### Check Init Scripts
+- #### Secure SSH Configuration
+- #### Check Cron Jobs
+- #### Check At Jobs
+- #### Check Kernel Modules (Rootkit)
+	-	```modinfo; modunload -i 0```
+- #### Monitor Procs/Subprocs (prstat)
+- #### Remove Aliases
+- #### Enable Pam Audit All user Commands
 
 # Web:
 -	Check Apache Modules: Apxs
