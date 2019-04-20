@@ -46,6 +46,7 @@ Will add sub bullets for specific tools/scripts
 # Linux
 - #### Reset Passwords (Rotate w/ Sheet)
 - #### Enable IPtables w/ Logging from script
+    - sudo iptables-restore < /etc/iptables.firewall.rules
 - #### Check sudo permissions
     - Sanity Check permissions /etc/passwd /etc/shadow
         - ```ls -l /etc/shadow```
