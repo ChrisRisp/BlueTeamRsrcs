@@ -96,3 +96,5 @@ Will add sub bullets for specific tools/scripts
 - https://github.com/marshyski/quick-secure/blob/master/quick-secure
 - https://docs.google.com/presentation/d/1pPXLg3KqwSMLRCNRfows5QnVI2mLjSmll5vN2WHMFJg/edit#slide=id.g8e1a55d_0_5
 - https://www.netresec.com/?page=networkminer
+- http://www.cheat-sheets.org/saved-copy/Solaris_quickref.pdf
+- http://www.tablespace.net/quicksheet/solaris-quicksheet.pdf
