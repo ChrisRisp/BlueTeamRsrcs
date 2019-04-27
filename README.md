@@ -111,7 +111,7 @@ Will add sub bullets for specific tools/scripts
 # Other Resources
 
 - https://github.com/meirwah/awesome-incident-response
-https://alexlevinson.wordpress.com/2017/05/09/know-your-opponent-my-ccdc-toolbox/
+- https://alexlevinson.wordpress.com/2017/05/09/know-your-opponent-my-ccdc-toolbox/
 - https://github.com/BinaryDefense/artillery
 - https://github.com/chrisjd20/Blue-Team-Cheat-Sheets/blob/master/BTCSwGSEnotes.pdf
 - https://github.com/ucrcyber/CCDC/tree/master/blue-team
